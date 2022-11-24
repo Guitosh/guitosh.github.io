@@ -1,6 +1,6 @@
 body
 {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 
@@ -12,14 +12,6 @@ header
 
 }
 
-header img
-{
-  padding-left: 1rem;
-  margin-bottom: 1rem;
-}
-
-
-
 header i 
 {
     margin-top: 1.5rem;
@@ -27,9 +19,8 @@ header i
 
 .image img
 {
-   height: 60%;
-   width: 60%;
-   margin-left: 10rem;
+   height: 100%;
+   width: 100%;
    border : 3px solid black;
 }
 
@@ -41,11 +32,26 @@ header i
 {
     border: 2px solid #F6F6F6;
     background-color: #F6F6F6;
+    
 }
-  
-.entre
+
+.menu h2
 {
-    display: flex;
+    position: relative;
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 1px 0 20px 11px;
+}
+
+.menu h2::after
+{
+    content: "";
+    width: 35px;
+    height: 3px;
+    background: #99E2D0;
+    position: absolute;
+    left: 0px;
+    bottom: 110px;
 }
 
 .carte
@@ -57,7 +63,49 @@ header i
     background-color: white;
     margin-bottom: 5%;
     margin-left: 5%;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    max-height: 10%;
+   
 }
+
+.carte p 
+{
+    display: flex;
+    width: 100%;
+    min-width: 0px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-end;
+}
+
+.cartetexte
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.carte h4
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu strong
+{
+margin-right: 15px;
+}
+
+
+.entre
+{
+    display: flex;   
+}
+
+
 
 .carte h4
 
@@ -74,7 +122,140 @@ margin-left: 0.5rem;
 margin: 0px;
 margin-left: 0.5rem;
 margin-bottom: 1rem;
+text-overflow: ellipsis;
+overflow:auto;
+word-break:normal;
 }
+
+
+@keyframes apparition {
+    0% {
+       opacity :0;
+   
+   }
+   100% {
+       opacity :1;
+   }
+
+   
+   }
+
+   .entre :nth-child(2)
+   {
+    animation : apparition 2s;
+    -webkit-animation: apparition 2s;
+   }
+   
+   .entre :nth-child(3)
+   {
+    animation : apparition 4s;
+    -webkit-animation: apparition 4s;
+   }
+   
+   .entre :nth-child(4)
+   {
+    animation : apparition 6s;
+    -webkit-animation: apparition 6s;
+   }
+   
+   .Plats :nth-child(2)
+   {
+    animation : apparition 2s;
+    -webkit-animation: apparition 2s;
+   }
+   
+   .Plats :nth-child(3)
+   {
+    animation : apparition 4s;
+    -webkit-animation: apparition 4s;
+   }
+   
+   .Plats :nth-child(4)
+   {
+    animation : apparition 6s;
+    -webkit-animation: apparition 6s;
+   }
+
+   .Desserts :nth-child(2)
+   {
+    animation : apparition 2s;
+    -webkit-animation: apparition 2s;
+   }
+   
+   .Desserts :nth-child(3)
+   {
+    animation : apparition 4s;
+    -webkit-animation: apparition 4s;
+   }
+   
+   .Desserts :nth-child(4)
+   {
+    animation : apparition 6s;
+    -webkit-animation: apparition 6s;
+   }
+
+
+.cartetexte
+{   
+    width: 100%;
+    height: 100%;
+   
+}
+
+
+.animation
+{
+    background-color: #99E2D0;
+    width: 0px;
+    height:100% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.animation i 
+{
+    color: white;
+    font-size: xx-large;
+    animation: rotation ease-in-out 4s ;
+}
+
+
+
+@keyframes rotation {
+    0%{
+        transform: rotate(0deg);
+   }
+   100%{
+        transform: rotate(360deg);
+   }
+    
+}
+
+.carte:hover .animation
+{
+    width: 80px;
+    animation : slide ease-out 1s;
+}
+
+@keyframes slide {
+    from {
+      transform: translateX(100%);
+    }
+  
+    to {
+      transform: translateX(0%);
+    }
+  }
+
+
+
+
+
+
+
 
 
 .Plats
@@ -179,7 +360,13 @@ border: none;
 .carte
 {
     width: 90%;
+
 }
+
+.animation
+ {
+    height: 90px;
+ }
 
 .menu
 {
@@ -190,14 +377,13 @@ z-index: 1;
 position: relative;
 }
 
-.menu p 
+.menu h2::after
 {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: flex-end;
+    
+    bottom: -8px;
 }
+
+
 
 .menu strong
 {
