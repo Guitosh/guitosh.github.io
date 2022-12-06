@@ -4,11 +4,96 @@ body
     width: 100%;
     font-family: 'Raleway', sans-serif;
 }
+
+
+.preloader
+{
+    position:fixed ;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to bottom right, #FF79DA, #9356DC);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: effacement 3s;
+    -webkit-animation: effacement 3s ease-in-out;
+    animation-fill-mode: forwards; 
+   
+    
+}
+
+@keyframes effacement {
+    0% {opacity : 1; height :100%;}
+    99% {opacity : 1; height:1%;}
+    100% {opacity : 0; height : 0%; ;}
+}
+
+.preloader h1
+{
+    color:white;
+    font-size: 2rem;
+    text-align: center;
+  
+}
+
+
+
+.preloader .loader
+{
+    display: block;
+    width: 64px;
+    height: 64px;
+    position:relative;
+   
+}
+
+.preloader .loader::before
+{
+    content: "\f254";
+    font-family: "Font Awesome 5 Free";
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border : 5px solid white;
+    border-color: white transparent white transparent;
+    border-radius: 50%;
+    animation: loader 1s infinite ease-in-out; 
+    
+    
+   
+}
+
+@keyframes loader {
+    
+    0%{
+        transform : rotate(0deg);
+    }
+    100%{
+        transform : rotate(360deg);
+    }
+}
+
+
+
+
 header
 {
     display: flex;
     justify-content: center;
     width: 100%;
+}
+
+a{
+ text-decoration: none;
+ color: black;
 }
 
 .localisation 
@@ -17,7 +102,7 @@ header
     justify-content: center;
     border : 1px #EAEAEA solid;
     background-color:#EAEAEA ;
-    width: : 100%;
+    width:100%;
 }
 .localisation i 
 {
@@ -36,8 +121,7 @@ header
 .presentation a
 {
 text-decoration: none;
-border : 1px #D36BDB solid;
-background-color: #D36BDB;
+background:linear-gradient(to bottom right, #FF79DA, #9356DC);
 border-radius: 25px 25px 25px 25px;
 color: white;
 padding : 14px 25px 14px 25px;
@@ -54,7 +138,10 @@ list-style: none;
 justify-content: center;
 align-items: center;
 margin-bottom: 4%;
+gap : 5%;
 }
+
+
 
 .fonctionnement a
 {
@@ -64,18 +151,98 @@ color : black;
 font-weight: bold;
 text-decoration: none;
 background-color: #F6F6F6;
-padding: 17px 55px 17px 55px;
+
 border-radius: 19px 19px 19px 19px ;
-margin-right: 2em;
 position: relative;
+ width: 300px;
+    display: block;
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
 }
+
+.fonctionnement a:hover
+{
+    background-color: #f5edff;
+    border-color:#f5edff ;
+}
+
 
 .fonctionnement i
 {
-position: absolute;
-padding-left : 25px;
-z-index: 1;
+    position: absolute;
+    padding-left: 23px;
+    z-index: 1;
+    padding-top: 20px;
 }
+
+.fa-mobile-screen:hover,.fa-list-ul:hover .fa-shop:hover
+{
+    color: #9356dc;
+}
+
+
+
+.fa-1::before
+{
+    content: "\31";
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    font-weight: bold;
+    margin-left: -35px;
+    margin-top: -4px;
+    background: #9356dc;
+    color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.fa-2::before
+{
+        content: "\32";
+        font-family: "Font Awesome 5 Free";
+        position: absolute;
+        font-weight: bold;
+        margin-left: -35px;
+        margin-top: -4px;
+        background: #9356dc;
+        color: white;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+}
+
+.fa-3::before
+{
+    content: "\33";
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    font-weight: bold;
+    margin-left: -35px;
+    margin-top: -4px;
+    background: #9356dc;
+    color: white;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+
 
 .fonctionnement h2
 { 
@@ -88,9 +255,10 @@ z-index: 1;
 .restaurant
 {
     display: flex;
-    gap : 2%;
+    gap : 5%;
     border: 3px #F6F6F6 solid;
     justify-content: center;
+    align-items: center;
    
 }
 .secrestaurant
@@ -99,35 +267,25 @@ z-index: 1;
     background-color: #F6F6F6;
 }
 
-.carte
- {
-    
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 22%;
-    border-radius: 20px 20px 20px 20px;
-    background-color: white;
-    margin-bottom: 5%;
-    margin-left: 5%;
-    
-    
-  }
-  
-.card:hover 
-{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-
-}
 
 
 .fa-heart::before {
     content: "\f004";
-    font-weight: bold;
     transition: color 1s ease-out;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: black;
 }
 .fa-heart:hover::before{
-    color: red;
     cursor: pointer;
+    font: var(--fa-font-solid);
+    content: "\f004";
+    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    z-index: 20;
+    transition: all 5s
 }
   
 .restaurant img 
@@ -144,13 +302,21 @@ z-index: 1;
   height: 300px;
   object-fit: cover;
 }    
-    
+
+.carte
+{
+    width: 93%;
+    margin-bottom: 19px;
+}
 .container 
 {
+    border: 1px white solid;
     background-color: white;
-    line-height : 1px;
-    text-decoration : none;
+    line-height: 1px;
+    text-decoration: none;
     position: relative;
+    top: -2px;
+    border-radius: 0px 0px 22px 22px;
     
 }
 
@@ -181,6 +347,18 @@ footer
 border: 1px solid #353535;
 background-color: #353535;
 
+}
+
+
+footer ul
+{
+    list-style: none;
+    color: white;
+}
+
+footer a
+{
+    color: white;
 }
 
 footer img
@@ -233,12 +411,13 @@ margin-bottom: 2rem;
 .fonctionnement ul
 {
 width: 90%;
+gap: 0%;
 
 }
 
 .fonctionnement li
 {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 
 }
 

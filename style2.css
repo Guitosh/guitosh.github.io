@@ -7,7 +7,6 @@ body
 header
 {
     display: flex;
-    align-items: center;
     justify-content: center;
 
 }
@@ -17,15 +16,48 @@ header i
     margin-top: 1.5rem;
 }
 
+.fa-arrow-left
+{
+    color: black;
+    align-items: center;
+    padding-right: 11px;
+
+}
+
 .image img
 {
    height: 100%;
    width: 100%;
    border : 3px solid black;
+   object-fit: cover;
 }
 
 .titre{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+.fa-heart::before {
+    content: "\f004";
+    transition: color 1s ease-out;
+    
+    font-size: XXX-LARGE;
+    color: black;
+}
+.fa-heart:hover::before{
+    cursor: pointer;
+    font: var(--fa-font-solid);
+    content: "\f004";
+    font-size: XXX-LARGE;
+    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    z-index: 20;
+    transition: all 5s
 }
 
 .menu 
@@ -70,9 +102,13 @@ header i
    
 }
 
+
 .carte p 
 {
     display: flex;
+    margin: 0px;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
     width: 100%;
     min-width: 0px;
     flex-direction: row;
@@ -87,11 +123,28 @@ header i
     text-overflow: ellipsis;
 }
 
+.cartetexte
+{   
+    width: 100%;
+    height: 100%;
+   
+}
+
 .carte h4
 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-top : 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+}
+
+.prix
+{
+    margin-top: 51px;
+    display: block;
+    padding-left: 10px;
 }
 
 .menu strong
@@ -104,29 +157,6 @@ margin-right: 15px;
 {
     display: flex;   
 }
-
-
-
-.carte h4
-
-{
-margin-top : 1rem;
-margin-bottom: 1rem;
-margin-left: 0.5rem;
-}
-
-
-
-.carte p
-{
-margin: 0px;
-margin-left: 0.5rem;
-margin-bottom: 1rem;
-text-overflow: ellipsis;
-overflow:auto;
-word-break:normal;
-}
-
 
 @keyframes apparition {
     0% {
@@ -156,6 +186,12 @@ word-break:normal;
    {
     animation : apparition 6s;
     -webkit-animation: apparition 6s;
+   }
+
+   .entre :nth-child(5)
+   {
+    animation : apparition 8s;
+    -webkit-animation: apparition 8s;
    }
    
    .Plats :nth-child(2)
@@ -195,13 +231,6 @@ word-break:normal;
    }
 
 
-.cartetexte
-{   
-    width: 100%;
-    height: 100%;
-   
-}
-
 
 .animation
 {
@@ -236,7 +265,7 @@ word-break:normal;
 
 .carte:hover .animation
 {
-    width: 80px;
+    width: 90px;
     animation : slide ease-out 1s;
 }
 
@@ -249,13 +278,6 @@ word-break:normal;
       transform: translateX(0%);
     }
   }
-
-
-
-
-
-
-
 
 
 .Plats
@@ -283,7 +305,7 @@ word-break:normal;
 {
 text-decoration: none;
 border : 1px #D36BDB solid;
-background-color: #D36BDB;
+background : linear-gradient(to bottom right, #FF79DA, #9356DC);
 border-radius: 25px 25px 25px 25px;
 color: white;
 padding : 14px 25px 14px 25px;
@@ -332,6 +354,11 @@ body
 {
     
     margin: 0;
+}
+
+.fa-arrow-left
+{
+    margin-top: 17px;
 }
 
 header img
