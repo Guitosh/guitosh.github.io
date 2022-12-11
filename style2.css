@@ -4,6 +4,7 @@ body
 }
 
 
+
 header
 {
     display: flex;
@@ -39,19 +40,24 @@ header i
     flex-direction: row;
 }
 
+.titre h1
+{
+    font-family: "Shrikhand", sans-serif;
+    margin-left: 22px;
+}
 
 .fa-heart::before {
     content: "\f004";
     transition: color 1s ease-out;
-    
-    font-size: XXX-LARGE;
+    font-size:larger;
     color: black;
+    margin-right: 39px
 }
 .fa-heart:hover::before{
     cursor: pointer;
     font: var(--fa-font-solid);
     content: "\f004";
-    font-size: XXX-LARGE;
+    font-size: larger;
     background: linear-gradient(to bottom right, #FF79DA, #9356DC);
     background-clip: text;
     -webkit-background-clip: text;
@@ -72,7 +78,7 @@ header i
     position: relative;
     font-weight: 400;
     font-size: 1rem;
-    margin: 1px 0 20px 11px;
+    margin: 1px 0 20px 27px;
 }
 
 .menu h2::after

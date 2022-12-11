@@ -2,7 +2,7 @@
 body
 {
     width: 100%;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 
@@ -154,7 +154,8 @@ background-color: #F6F6F6;
 
 border-radius: 19px 19px 19px 19px ;
 position: relative;
- width: 300px;
+width: 338px;
+margin-right: 26px;
     display: block;
     height: 55px;
     text-align: center;
@@ -240,15 +241,12 @@ position: relative;
 
 }
 
-
-
-
-
 .fonctionnement h2
 { 
     display:flex ;
     justify-content: center;
     margin-bottom: 3%;
+    margin-right: 157px;
 
 }
 
@@ -267,6 +265,10 @@ position: relative;
     background-color: #F6F6F6;
 }
 
+.secrestaurant h3
+{
+    padding-left: 24px;
+}
 
 
 .fa-heart::before {
